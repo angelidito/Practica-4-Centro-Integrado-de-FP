@@ -23,7 +23,7 @@ main {
     box-sizing: border-box;
     display: grid;
     grid-column: 1fr;
-    grid-template-rows: max-content;
+    grid-template-rows: min-content;
     grid-template-areas:
         'logo'
         'formulario';
@@ -124,17 +124,24 @@ button {
         display: flex;
         align-items: center;
         align-content: center;
+        justify-content: center;
         flex-wrap: wrap;
-
         grid-area: aside;
     }
 
+    aside h1 {
+        margin: 0 10%;
+    }
+
     aside img {
-        width: 100%;
+        width: 90%;
+        margin: 0.5em, 5%;
         height: auto;
     }
 
     aside p {
+        max-width: 85%;
+        margin: 0 7.5%;
         text-align: center;
     }
 
@@ -145,16 +152,24 @@ button {
         border: none;
         border-left: 3px solid #8C4F2B;
         grid-area: main;
+        height: 100%;
         height: max(100%, 100vh);
         width: 450px;
         margin: 0;
-        margin: 0;
+        padding: 1em 2em;
+        grid-column: 1fr;
+        grid-template-rows: auto min-content min-content auto;
+        grid-template-areas:
+            ' '
+            'logo'
+            'formulario'
+            ' ';
     }
 
 
     #logo {
         grid-area: logo;
-        margin-top: 1em;
+        margin-bottom: 0;
 
         width: calc(35% - 1em);
         min-width: 150px;
@@ -166,7 +181,10 @@ button {
     #formulario {
         grid-area: formulario;
         box-sizing: border-box;
-        margin: 1em auto 1em auto;
-        width: 400px;
+        margin-top: 1em;
+        width: calc(450px - 4em);
+        margin-bottom: 0;
+
+
     }
 }
