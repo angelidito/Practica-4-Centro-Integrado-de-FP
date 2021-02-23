@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - El Sitio</title>
+    <link rel="stylesheet" href="CSS/basic.css">
+
+    <link rel="stylesheet" href="CSS/inicio.css">
+</head>
+
+<body>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let ciclos = document.getElementsByClassName('ciclos');
+
+            for (let i = 0; i < ciclos.length; i++) {
+                const div = ciclos[i];
+
+                div.addEventListener('click', mostrarOcultar);
+            }
+        })
+
+
+        function mostrarOcultar(e) {
+            let nivel = e.target.parentNode.getAttribute('class').split(' ')[1];
+
+            let div = document.getElementsByClassName(nivel)[1];
+
+
+            if (div.style.display != "flex") {
+                div.style.display = "flex";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+    <header>
+        <img src="img/logo.png" alt="El logo de la web. Es un Gato" class="logo">
+        <h1>&nbsp;El Sitio&nbsp;</h1>
+
+    </header>
+
+    <nav class="breadcrumb">
+        <ul class="breadcrumb">
+            <li>
+                &nbsp;<a href="#">Inicio</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="desplegable">
+        <span class="desplegable">&nbsp;
+            Menu
+        </span>
+        <ul class="btn-group">
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#">FP Básica</a>
+            </li>
+            <li>
+                <a href="#">FP Media</a>
+            </li>
+            <li>
+                <a href="#">FP Superior</a>
+            </li>
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+            <li>
+                <a href="administracion.html">Admón</a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <div id="ciclos">
+            <div class="ciclos basicos">
+                <button>Ciclos formativos básicos</button>
+                <div class="modulos basicos">
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ciclos medios">
+                <button>Ciclos formativos medios</button>
+                <div class="modulos medios">
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ciclos superiores">
+                <button>Ciclos formativos superiores</button>
+                <div class="modulos superiores">
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                    <div class="modulo">
+                        <img src="img/modulo.jpg" alt="modulo1">
+                        <span class="nombreMod">Nombre del módulo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <aside>
+        <div class="imagen">
+            <img src="img/calendario.png" alt="calendario">
+        </div>
+        <div class="texto">
+            <h5>Usuarios en linea</h5>
+            <ul>
+                <li>Juan Díez de la Rosa Campos </li>
+                <li>María Martín Martín</li>
+                <li>Grimer Tangela Karp</li>
+                <li>Chu Lee Yan</li>
+                <li>Peter Pollo Parto</li>
+            </ul>
+        </div>
+        <div class="texto">
+            <h5>Proximos exámenes</h5>
+            <ul>
+                <li> No hay exámenes fijados por el momento</li>
+            </ul>
+        </div>
+
+    </aside>
+    <footer>
+
+        <small>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit quis architecto fugiat eveniet neque
+            blanditiis non aliquam. Reprehenderit ex nulla explicabo, dignissimos, illum aut necessitatibus provident
+            iste ducimus, amet id?
+        </small>
+
+        <address>
+            <p>Calle del Sitio 42, s/n </p>
+            <p>Ciudad, País</p>
+            <p>+34 987 654 321</p>
+        </address>
+        <div id="logo_footer">
+            <img src="img/logo.png" alt="El logo de la web. Es un gato." class="logo">
+            <small> El Sitio &copy;</small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

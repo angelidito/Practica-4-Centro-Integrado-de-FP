@@ -1,0 +1,33 @@
+body {
+    background-color: gray;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px min-content 2em auto min-content;
+    grid-template-areas:
+        'cabecera'
+        'scrumb'
+        'menu'
+        'main'
+        'pie';
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form {
+
+    flex-grow: 1;
+    height: min-content;
+}
+
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 40%;
+}

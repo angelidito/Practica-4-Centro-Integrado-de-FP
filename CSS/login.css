@@ -1,0 +1,172 @@
+html,
+body {
+    width: auto;
+    height: auto;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+
+    align-items: flex-start;
+
+}
+
+aside {
+    display: none;
+
+}
+
+main {
+    border: 3px solid #8C4F2B;
+    background-color: #D9AD5B;
+    box-sizing: border-box;
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas:
+        'logo'
+        'formulario';
+    align-content: stretch;
+    /* justify-content: center; */
+    margin: 1em;
+    padding: 2em;
+    height: auto;
+    min-width: 231px;
+    width: 95%;
+}
+
+
+#logo {
+    grid-area: logo;
+    margin: auto;
+    width: calc(35% - 1em);
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo>img {
+    margin: auto;
+    margin-top: 1em;
+    width: 150px;
+}
+
+#formulario {
+    grid-area: formulario;
+    box-sizing: border-box;
+    margin: 1em 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+h2,
+h3 {
+    margin: auto;
+    text-align: left;
+
+}
+
+form {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+}
+
+ul {
+    margin: 2em 1em;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li,
+input {
+    width: 100%;
+    margin-right: 0.5em;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+}
+
+
+.loginico {
+    margin-right: 0.4em;
+}
+
+@media (min-width: 600px) {
+    body {
+        height: scree;
+        display: grid;
+        /* justify-content: space-between;
+
+        align-items: flex-start;
+        box-sizing: content-box; */
+        grid-template-columns: 1fr 450px;
+        grid-template-rows: 100%;
+        grid-template-areas: 'aside main';
+    }
+
+    aside {
+        max-width: 100%;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+
+        grid-area: aside;
+    }
+
+    aside img {
+        width: 100%;
+        height: auto;
+    }
+
+    aside p {
+        text-align: center;
+    }
+
+
+
+    main {
+
+        border: none;
+        border-left: 3px solid #8C4F2B;
+        grid-area: main;
+        height: max(100%, 100vh);
+        width: 450px;
+        margin: 0;
+        margin: 0;
+    }
+
+
+    #logo {
+        grid-area: logo;
+        margin-top: 1em;
+
+        width: calc(35% - 1em);
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #formulario {
+        grid-area: formulario;
+        box-sizing: border-box;
+        margin: 1em auto 1em auto;
+        width: 400px;
+    }
+}

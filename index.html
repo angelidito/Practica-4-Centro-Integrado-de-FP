@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión - El Sitio</title>
+
+    <link rel="stylesheet" href="CSS/basic.css">
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <aside>
+        <h1>El sitio, tu sitio.</h1>
+        <img src="./img/estudiante.jpg" alt="">
+        <p>
+            El sitio es un sitio que te hará sentir cosas en sitios que no habías situado antes.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum laudantium fugit, quibusdam maiores quod
+            magnam modi, delectus rem nisi inventore incidunt eius voluptas sunt itaque dolorem obcaecati nulla corporis
+            accusantium!
+        </p>
+        <p>
+            Si este no es tu sitio, ninguno lo es.
+        </p>
+    </aside>
+    <main>
+        <div id="logo">
+            <img src="./img/logo.png" alt="Logo de la web: un gato.">
+            <h2>El sitio</h2>
+        </div>
+        <div id="formulario">
+            <h3>Inicio de sesión</h3>
+            <form action="inicio.html">
+                <ul>
+                    <li>
+                        <label for="correo">Correo electrónico: </label>
+                    </li>
+                    <li><input type="email" id="correo" name="correo" placeholder="tucorreo@elsitio.es"
+                            autocomplete="email" required>
+                    </li>
+                    <li>
+                        <label for="contraseña">Contraseña: </label>
+                    </li>
+                    <li><input type="password" id="contraseña" name="contraseña" placeholder="****************"
+                            autocomplete="current-password" required>
+                    </li>
+                    <li>
+                        <button type="submit" class="aceptar" id="login">
+                            <img src="./img/login.ico" alt="Login" class="loginico">
+                            Accecer
+                        </button>
+                        <a href="#" onclick="alert('Contacta con el administrador de tu centro.');"><small>He olvidado
+                                la contraseña</small></a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
